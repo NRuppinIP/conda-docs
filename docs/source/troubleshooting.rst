@@ -149,3 +149,24 @@ command ``locale -a`` will show you all the specifiers. For example, the
 language code for US English is ``en_US.UTF-8``. The locale affects what
 translations are used when they are available, and also how dates,
 currencies, and decimals are formatted.
+
+Issue: ``AttributeError`` or missing ``getproxies``
+===================================================
+
+When running a command such as ``conda update ipython``, you may get an
+``AttributeError: 'module' object has no attribute 'getproxies'``.
+
+Resolution: Update ``requests`` and be sure ``PYTHONPATH`` is not set.
+----------------------------------------------------------------------
+
+This can be caused by an old version of ``requests``, or by having the ``PYTHONPATH``
+environment variable set.
+
+``conda info -a`` will show the requests version and various environment
+variables such as ``PYTHONPATH``.
+
+The requests version can be updated with "pip install -U requests".
+
+On Windows ``PYTHONPATH`` can be cleared in the environment variable settings.
+On OS X and Linux it can typically be cleared by removing it from the bash
+profile and restarting the shell.
