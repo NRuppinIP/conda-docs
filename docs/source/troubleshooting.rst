@@ -165,7 +165,7 @@ environment variable set.
 ``conda info -a`` will show the ``requests`` version and various environment
 variables such as ``PYTHONPATH``.
 
-The requests version can be updated with "pip install -U requests".
+The ``requests`` version can be updated with ``pip install -U requests``.
 
 On Windows ``PYTHONPATH`` can be cleared in the environment variable settings.
 On OS X and Linux it can typically be cleared by removing it from the bash
