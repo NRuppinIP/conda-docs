@@ -162,7 +162,7 @@ Resolution: Update ``requests`` and be sure ``PYTHONPATH`` is not set.
 This can be caused by an old version of ``requests``, or by having the ``PYTHONPATH``
 environment variable set.
 
-``conda info -a`` will show the requests version and various environment
+``conda info -a`` will show the ``requests`` version and various environment
 variables such as ``PYTHONPATH``.
 
 The requests version can be updated with "pip install -U requests".
