@@ -4,14 +4,14 @@ The meta.yaml file
 ==================
 
 All the metadata in the conda build recipe is specified in the ``meta.yaml`` file, 
-as in this example of a simple meta.yaml file:
+as in this simple example:
 
 .. literalinclude:: /build_tutorials/meta.yaml
 
 NOTE: All sections are optional except for package/name and package/version.
 
 NOTE: All headers should appear exactly once. If they appear multiple times, only 
-the last will be remembered. For example, the "package:" header should only appear 
+the last will be executed. For example, the "package:" header should only appear 
 once in the file.
 
 .. contents:: Sections of ``meta.yaml``:
@@ -502,8 +502,7 @@ variables are defined. Unless otherwise stated, the variables are booleans.
    * - ``win64``
      - True if the platform is Windows and the Python architecture is 64-bit
    * - ``py``
-     - The Python version as a two digit string (like ``'27'``). See also the
-       ``CONDA_PY`` environment variable :ref:`below <build-envs>`.
+     - The Python version as a two digit string (like ``'27'``). See also :ref:`conda_py <build-envs>` below.
    * - ``py3k``
      - True if the Python major version is 3
    * - ``py2k``
@@ -564,7 +563,7 @@ installed.  Enabling a feature does not install any packages that are not
 already installed, but it all future packages with that feature that are
 installed into that environment will be preferred.
 
-Feature names are independent of package names---it is a coincidence that
+NOTE: Feature names are independent of package names---it is a coincidence that
 ``mkl`` is both the name of a package and the feature that it tracks.
 
 To install a feature, install a package that tracks it. To remove a feature,
